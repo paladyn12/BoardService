@@ -1,4 +1,5 @@
 package BoardService.myproject.domain;
 
-public class User {
+
+public class User{
 }
