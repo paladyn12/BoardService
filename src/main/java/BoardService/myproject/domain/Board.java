@@ -1,6 +1,5 @@
 package BoardService.myproject.domain;
 
-import BoardService.myproject.dto.BoardDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
