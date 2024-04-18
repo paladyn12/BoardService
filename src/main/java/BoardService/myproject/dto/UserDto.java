@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
+// 정보 수정, 탈퇴 등에 사용되는 DTO
 public class UserDto {
 
     private String loginId;
