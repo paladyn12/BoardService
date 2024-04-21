@@ -34,7 +34,6 @@ public class UserController {
         model.addAttribute("userJoinRequest", new UserJoinRequest());
         return "users/join";
     }
-
     @PostMapping("join")
     public String join(@Valid @ModelAttribute UserJoinRequest req, BindingResult bindingResult, Model model){
         if (userService.joinVaild(req, bindingResult).hasErrors()){
@@ -78,7 +77,6 @@ public class UserController {
         model.addAttribute("userDto", UserDto.of(user));
         return "users/edit";
     }
-
     @PostMapping("/edit")
     public String userEdit(@Valid @ModelAttribute UserDto dto, BindingResult bindingResult,
                            Authentication auth, Model model){
@@ -99,7 +97,6 @@ public class UserController {
         model.addAttribute("userDto", UserDto.of(user));
         return "users/delete";
     }
-
     @PostMapping("/delete")
     public String userDelete(@ModelAttribute UserDto dto, Authentication auth, Model model){
         Boolean deleteSuccess = userService.delete(auth.getName(), dto.getNowPassword());
