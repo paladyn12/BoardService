@@ -80,6 +80,7 @@ public class UserController {
     @PostMapping("/edit")
     public String userEdit(@Valid @ModelAttribute UserDto dto, BindingResult bindingResult,
                            Authentication auth, Model model){
+        
         if(userService.editValid(dto, bindingResult, auth.getName()).hasErrors()){
             return "users/edit";
         }
