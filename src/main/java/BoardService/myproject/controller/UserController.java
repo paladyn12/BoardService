@@ -82,6 +82,7 @@ public class UserController {
                            Authentication auth, Model model){
         
         if(userService.editValid(dto, bindingResult, auth.getName()).hasErrors()){
+
             return "users/edit";
         }
 
