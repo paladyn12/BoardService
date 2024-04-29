@@ -14,4 +14,5 @@ public class BoardCntDto {
     private long totalGreetingCnt;
     private long totalFreeCnt;
     private long totalGoldCnt;
+
 }

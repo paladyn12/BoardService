@@ -1,7 +1,7 @@
 package BoardService.myproject.controller;
 
 import BoardService.myproject.domain.BoardCategory;
-import BoardService.myproject.dto.CommentCreateRequest;
+import BoardService.myproject.dto.comment.CommentCreateRequest;
 import BoardService.myproject.dto.board.BoardCreateRequest;
 import BoardService.myproject.dto.board.BoardDto;
 import BoardService.myproject.dto.board.BoardSearchRequest;
