@@ -1,11 +1,8 @@
-package BoardService.myproject.dto;
+package BoardService.myproject.dto.user;
 
 import BoardService.myproject.domain.User;
-import BoardService.myproject.domain.UserRole;
 import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 @Builder

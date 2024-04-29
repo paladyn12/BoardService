@@ -1,4 +1,4 @@
-package BoardService.myproject.dto;
+package BoardService.myproject.dto.user;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package BoardService.myproject.dto;
+package BoardService.myproject.dto.user;
 
 import BoardService.myproject.domain.User;
 import BoardService.myproject.domain.UserRole;

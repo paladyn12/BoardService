@@ -1,5 +1,6 @@
 package BoardService.myproject.domain;
 
+import BoardService.myproject.dto.board.BoardDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -58,4 +59,6 @@ public class Board extends BaseEntity{
         this.uploadImage = uploadImage;
     }
 
+    public void update(BoardDto dto) {
+    }
 }
