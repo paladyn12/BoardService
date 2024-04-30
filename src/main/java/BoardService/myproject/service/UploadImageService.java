@@ -7,6 +7,7 @@ import BoardService.myproject.repository.UploadImageRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.UrlResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,14 +16,21 @@ import org.springframework.web.util.UriUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
-// saveImage() : 입력된 파일의 이름을 "UUID + 원본 파일 확장자" 로 바꿔 저장
-// downloadImage() : 다시 원본 파일명으로 수정 후 파일 return
+/**
+    fileDir : /src/main/resources/static/upload-images/
+ * getFullPath(filename) : fileDir + filename 반환
+ * saveImage(MultipartFile, Board) : 기존 파일명을 뽑아 UUID 변환 후 파일을 변환된 파일명으로 위치를 바꿔 저장
+ * deleteImage(UploadImage) : 리포지토리에서 이미지 삭제
+ * extractExt(originalFilename) : 확장자 추출 메서드
+ * downloadImage(boardId) : 게시판의 이미지를 클릭 시 다운로드 할 수 있는 기능
+ */
 public class UploadImageService {
 
     private final UploadImageRepository uploadImageRepository;
@@ -61,7 +69,6 @@ public class UploadImageService {
         Files.deleteIfExists(Paths.get(getFullPath(uploadImage.getSavedFilename())));
     }
 
-    // 확장자 추출 메서드
     private String extractExt(String originalFilename) {
         int pos = originalFilename.lastIndexOf(".");
         return originalFilename.substring(pos + 1);
@@ -78,6 +85,12 @@ public class UploadImageService {
         UrlResource urlResource = new UrlResource("file:" + getFullPath(board.getUploadImage().getSavedFilename()));
 
         // 업로드 한 파일명이 한글인 경우를 대비한 작업
-        String encodedUploadFileName = UriUtils
+        String encodedUploadFileName = UriUtils.encode(board.getUploadImage().getOriginalFilename(), StandardCharsets.UTF_8);
+        String contentDisposition = "attachment; filename=\"" + encodedUploadFileName + "\"";
+
+        // header에 CONTENT_DISPOSITION 설정을 통해 클릭 시 다운로드 진행
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, contentDisposition)
+                .body(urlResource);
     }
 }

@@ -23,6 +23,20 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+/**
+ * BindingResult joinVaild(UserJoinRequest, BindingResult) : 회원가입 요청 정보의 유효성 검사
+ * join(UserJoinRequest) : 회원가입 기능. 유효성 검사 통과 시 호출
+    encode된 비밀번호가 들어감
+ * myInfo(loginId) : 로그인 ID로 회원 조회
+ * BindingResult editValid(UserDto, BindingResult, loginId) : 개인정보 수정 요청 정보의 유효성 검사
+ * edit(UserDto, loginId) : 개인정보 수정 기능. 유효성 검사 통과 시 호출
+    새 비밀번호를 입력하지 않으면 기존 비밀번호를 사용
+ * delete(loginId, nowPassword) : 비밀번호가 일치하면 User 정보 삭제
+    User가 누른 좋아요와 작성한 댓글도 함께 삭제, orphanRemoval을 true로 했기 때문에 개수만 조작
+ * findAllByNickname(nickname, PageRequest) : nickname을 포함하는 모든 유저 조회
+ * changeRole(userId) : User의 changeRole() 호출
+ * getUserCnt() : 유저 수 조회를 위한 UserCntDto 반환
+ */
 public class UserService {
 
     private final UserRepository userRepository;
@@ -126,8 +140,8 @@ public class UserService {
         }
     }
 
-    public Page<User> findAllByNickname(String keyword, PageRequest pageRequest) {
-        return userRepository.findAllByNicknameContains(keyword, pageRequest);
+    public Page<User> findAllByNickname(String nickname, PageRequest pageRequest) {
+        return userRepository.findAllByNicknameContains(nickname, pageRequest);
     }
 
     @Transactional
