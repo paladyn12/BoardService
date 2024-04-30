@@ -17,6 +17,13 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+/**
+ * writeComment(boardId, CommentCreateRequest, loginId) : 게시글 ID, 로그인 ID로 댓글 저장과 게시글 댓글수 수정
+ * findAll(boardId) : 게시글의 모든 댓글 조회
+ * editComment(commitId, newBody, loginId) : 로그인 ID와 댓글 ID로 수정할 댓글을 찾아 newBody로 update
+ * deleteComment(commentId, loginId) : 로그인 ID와 댓글 ID로 삭제할 댓글을 찾아 삭제
+    댓글을 작성한 유저거나 ADMIN이어야 삭제 가능
+ */
 public class CommentService {
 
     private final CommentRepository commentRepository;
@@ -35,8 +42,8 @@ public class CommentService {
     }
 
     @Transactional
-    public Long editComment(Long commitId, String newBody, String loginId) {
-        Optional<Comment> optComment = commentRepository.findById(commitId);
+    public Long editComment(Long commentId, String newBody, String loginId) {
+        Optional<Comment> optComment = commentRepository.findById(commentId);
         Optional<User> optUser = userRepository.findByLoginId(loginId);
         // comment나 user가 없거나 둘의 user 정보가 일치하지 않으면 수정 불가
         if (optComment.isEmpty() || optUser.isEmpty() || !optComment.get().getUser().equals(optUser.get())) {

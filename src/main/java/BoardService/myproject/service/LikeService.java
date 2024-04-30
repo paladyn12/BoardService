@@ -12,7 +12,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-// 좋아요 추가, 삭제 및 로그인 한 유저가 특정 게시글에 좋아요를 눌렀는지 여부 확인
+/**
+ * addLike(loginId, boardId) : 좋아요를 누르는 로그인 ID와 좋아요가 눌리는 게시글 조회
+    게시글 주인과 로그인 ID가 같으면 자기 게시글에 좋아요를 누르는 것이므로 User 계층의 like는 올라가지 않음
+ * deleteLike(loginId, boardId) : 좋아요를 삭제하는 로그인 ID와 좋아요가 삭제되는 게시글 조회
+    addLike와 마찬가지로 같은 사람이 좋아요를 삭제한 경우 User 계층의 like는 내려가지 않음
+ */
 public class LikeService {
 
     private final BoardRepository boardRepository;
