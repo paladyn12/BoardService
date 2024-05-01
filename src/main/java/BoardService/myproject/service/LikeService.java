@@ -1,8 +1,8 @@
 package BoardService.myproject.service;
 
-import BoardService.myproject.domain.Board;
-import BoardService.myproject.domain.Like;
-import BoardService.myproject.domain.User;
+import BoardService.myproject.domain.entity.Board;
+import BoardService.myproject.domain.entity.Like;
+import BoardService.myproject.domain.entity.User;
 import BoardService.myproject.repository.BoardRepository;
 import BoardService.myproject.repository.LikeRepository;
 import BoardService.myproject.repository.UserRepository;

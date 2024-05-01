@@ -1,6 +1,6 @@
 package BoardService.myproject.repository;
 
-import BoardService.myproject.domain.Comment;
+import BoardService.myproject.domain.entity.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

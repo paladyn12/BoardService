@@ -1,12 +1,12 @@
 package BoardService.myproject.service;
 
-import BoardService.myproject.domain.Comment;
-import BoardService.myproject.domain.Like;
-import BoardService.myproject.domain.User;
-import BoardService.myproject.domain.UserRole;
-import BoardService.myproject.dto.user.UserCntDto;
-import BoardService.myproject.dto.user.UserDto;
-import BoardService.myproject.dto.user.UserJoinRequest;
+import BoardService.myproject.domain.entity.Comment;
+import BoardService.myproject.domain.entity.Like;
+import BoardService.myproject.domain.entity.User;
+import BoardService.myproject.domain.enum_class.UserRole;
+import BoardService.myproject.domain.dto.user.UserCntDto;
+import BoardService.myproject.domain.dto.user.UserDto;
+import BoardService.myproject.domain.dto.user.UserJoinRequest;
 import BoardService.myproject.repository.CommentRepository;
 import BoardService.myproject.repository.LikeRepository;
 import BoardService.myproject.repository.UserRepository;

@@ -1,6 +1,6 @@
 package BoardService.myproject.controller;
 
-import BoardService.myproject.dto.comment.CommentCreateRequest;
+import BoardService.myproject.domain.dto.comment.CommentCreateRequest;
 import BoardService.myproject.service.BoardService;
 import BoardService.myproject.service.CommentService;
 import lombok.RequiredArgsConstructor;

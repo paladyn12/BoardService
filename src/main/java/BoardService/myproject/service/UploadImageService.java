@@ -1,7 +1,7 @@
 package BoardService.myproject.service;
 
-import BoardService.myproject.domain.Board;
-import BoardService.myproject.domain.UploadImage;
+import BoardService.myproject.domain.entity.Board;
+import BoardService.myproject.domain.entity.UploadImage;
 import BoardService.myproject.repository.BoardRepository;
 import BoardService.myproject.repository.UploadImageRepository;
 import jakarta.transaction.Transactional;

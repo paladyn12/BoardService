@@ -1,9 +1,9 @@
 package BoardService.myproject.controller;
 
-import BoardService.myproject.domain.User;
-import BoardService.myproject.dto.user.UserDto;
-import BoardService.myproject.dto.user.UserJoinRequest;
-import BoardService.myproject.dto.user.UserLoginRequest;
+import BoardService.myproject.domain.entity.User;
+import BoardService.myproject.domain.dto.user.UserDto;
+import BoardService.myproject.domain.dto.user.UserJoinRequest;
+import BoardService.myproject.domain.dto.user.UserLoginRequest;
 import BoardService.myproject.service.BoardService;
 import BoardService.myproject.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;

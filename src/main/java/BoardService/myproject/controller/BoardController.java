@@ -1,10 +1,10 @@
 package BoardService.myproject.controller;
 
-import BoardService.myproject.domain.BoardCategory;
-import BoardService.myproject.dto.comment.CommentCreateRequest;
-import BoardService.myproject.dto.board.BoardCreateRequest;
-import BoardService.myproject.dto.board.BoardDto;
-import BoardService.myproject.dto.board.BoardSearchRequest;
+import BoardService.myproject.domain.enum_class.BoardCategory;
+import BoardService.myproject.domain.dto.comment.CommentCreateRequest;
+import BoardService.myproject.domain.dto.board.BoardCreateRequest;
+import BoardService.myproject.domain.dto.board.BoardDto;
+import BoardService.myproject.domain.dto.board.BoardSearchRequest;
 import BoardService.myproject.service.BoardService;
 import BoardService.myproject.service.CommentService;
 import BoardService.myproject.service.LikeService;

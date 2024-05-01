@@ -1,7 +1,7 @@
 package BoardService.myproject.repository;
 
-import BoardService.myproject.domain.User;
-import BoardService.myproject.domain.UserRole;
+import BoardService.myproject.domain.entity.User;
+import BoardService.myproject.domain.enum_class.UserRole;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaRepository;

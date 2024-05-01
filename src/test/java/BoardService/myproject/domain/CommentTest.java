@@ -1,12 +1,11 @@
 package BoardService.myproject.domain;
 
-import org.assertj.core.api.Assertions;
+import BoardService.myproject.domain.entity.Comment;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CommentTest {
 
