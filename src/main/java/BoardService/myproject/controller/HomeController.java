@@ -16,6 +16,7 @@ public class HomeController {
 
     @GetMapping(value = {"", "/"})
     public String home(Model model) {
+
         model.addAttribute("userCntDto", userService.getUserCnt());
         model.addAttribute("boardCntDto", boardService.getBoardCnt());
         return "home";
