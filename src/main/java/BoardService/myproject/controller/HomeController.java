@@ -19,6 +19,7 @@ public class HomeController {
 
         model.addAttribute("userCntDto", userService.getUserCnt());
         model.addAttribute("boardCntDto", boardService.getBoardCnt());
+
         return "home";
     }
 }

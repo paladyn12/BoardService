@@ -43,6 +43,7 @@ public class BoardController {
         if (boardCategory == null) {
             model.addAttribute("message", "카테고리가 존재하지 않습니다,");
             model.addAttribute("nextUrl", "/");
+
             return "printMessage";
         }
 
