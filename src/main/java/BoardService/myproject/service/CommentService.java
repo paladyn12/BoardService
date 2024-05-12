@@ -28,7 +28,7 @@ public class CommentService {
 
     private final CommentRepository commentRepository;
     private final BoardRepository boardRepository;
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public void writeComment(Long boardId, CommentCreateRequest req, String loginId) {
         Board board = boardRepository.findById(boardId).get();
