@@ -169,6 +169,7 @@ public class BoardService {
         return null;
     }
     public BoardCntDto getBoardCnt(){
+
         return BoardCntDto.builder()
                 .totalBoardCnt(boardRepository.count())
                 .totalNoticeCnt(boardRepository.countAllByUserUserRole(UserRole.ADMIN))

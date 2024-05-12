@@ -146,7 +146,6 @@ public class UserService {
 
     @Transactional
     public void changeRole(Long userId) {
-
         User user = userRepository.findById(userId).get();
         user.changeRole();
     }

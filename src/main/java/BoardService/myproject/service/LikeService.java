@@ -57,6 +57,7 @@ public class LikeService {
     }
 
     public Boolean checkLike(String loginId, Long boardId) {
+
         return likeRepository.existsByUserLoginIdAndBoardId(loginId, boardId);
     }
 }

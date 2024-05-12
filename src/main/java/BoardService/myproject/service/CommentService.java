@@ -70,6 +70,7 @@ public class CommentService {
         board.commentChange(board.getCommentCnt() - 1);
 
         commentRepository.delete(optComment.get());
+
         return board.getId();
     }
 }

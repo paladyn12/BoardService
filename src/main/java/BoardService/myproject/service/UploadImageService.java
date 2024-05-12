@@ -45,6 +45,7 @@ public class UploadImageService {
     public UploadImage saveImage(MultipartFile multipartFile, Board board) throws IOException {
         if (multipartFile.isEmpty()) {
             return null;
+
         }
 
         String originalFilename = multipartFile.getOriginalFilename();
