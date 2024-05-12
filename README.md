@@ -14,8 +14,7 @@
 파일을 다운받아 build.gradle로 프로젝트 오픈<br/>
 자바 17버전, H2 database 필요<br/>
 # 기술 스택
-<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=thymeleaf&logoColor=white">
 <img src="https://img.shields.io/badge/h2-3776AB?style=for-the-badge&logo=h2&logoColor=white">
-<img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
