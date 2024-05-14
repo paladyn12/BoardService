@@ -16,5 +16,7 @@
 # 기술 스택
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
 <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
+<img src="https://img.shields.io/badge/jpa-6DB33F?style=for-the-badge&logo=jpa&logoColor=white">
 <img src="https://img.shields.io/badge/thymeleaf-0B610B?style=for-the-badge&logo=thymeleaf&logoColor=white">
 <img src="https://img.shields.io/badge/h2 Database-F7FE2E/?style=for-the-badge&logo=h2 Database&logoColor=white">
